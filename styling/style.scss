@@ -1,0 +1,419 @@
+@import 'normalize';
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+ }
+
+
+.bothpages{
+    min-width: 100vw;
+}
+
+ /**********************************************/
+/******************NAVIGATION******************/
+/**********************************************/
+
+
+button{
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 0;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+button span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    position: relative;
+    left:0;
+    transition: left 0.3s ease-in-out ;
+}
+
+input{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input:checked + .menu button span{
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+input:checked + .menu button span:nth-child(2){
+    opacity: 0;
+}
+
+input:checked +  .menu button span:nth-child(1){
+    transform: rotate(45deg);   
+}
+
+input:checked + .menu button span:nth-child(3){
+    transform: rotate(-45deg);   
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.608);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    visibility: hidden;
+}
+
+input:checked + .menu nav{
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: rubik, sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    text-shadow: 0px 4px 2px gray;
+}
+
+
+/**********************************************/
+/******************FIRST_PAGE******************/
+/**********************************************/
+
+.section1{
+    background-image: url(../images/adam-miller-dBaz0xhCkPY-unsplash.jpg);
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vh;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 100%;
+    }
+
+ 
+/*********************************************/
+/******************MOON_BOX*******************/
+/*********************************************/
+
+ aside{
+     background-color: rgba(255, 255, 255, 0.473);
+     border: 4px solid black;
+     position: absolute;
+     padding: 30px;
+     margin-bottom: 0;
+     left: 50px;
+     top: 70px;
+     min-width: 15%;
+     height: 175px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-weight: 600;
+     font-size: 2.4rem;
+     text-align: center;
+     line-height: 50px;
+ }
+
+ .readourstory{
+    position: absolute;
+    min-width: 220px;
+    bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 200;
+    text-align: left;
+    margin-bottom: 0;
+ }
+
+ .pil{
+    position: absolute;
+    top: 13px;
+    left: 110px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: 0.8s;
+ }
+
+ .readourstory:hover .pil{
+    transform: translateX(50%);
+ }
+
+ .pil3{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    color: white;
+ }
+     
+
+ 
+/*********************************************/
+/*****************SECOND_PAGE*****************/
+/*********************************************/
+
+
+.section2{
+    position: relative;
+    min-height: 100vh;
+    background-image: url(../images/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
+    background-size: 100%;
+    margin: 0;
+    gap: 10px;
+    border-bottom: 0;
+}
+
+
+/*********************************************/
+/*****************TEXT_BOXES******************/
+/*********************************************/
+
+
+.containerfirstcol{
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.spaceventures{
+    position: relative;
+    padding-top: 30px;
+    height: 140px;
+    
+    h2{
+        margin-bottom: 0;
+        padding: 0;
+        
+        span:first-of-type {
+            display: block;
+            position: relative;
+            z-index: 1;
+            font-family: 'Rubik', sans-serif;
+            font-size: 4rem;
+            color: white;
+            align-content: center;
+        }
+
+        span:nth-of-type(2) {
+            color: rgba(255, 255, 255, 0.582);
+            position: relative;
+            left: 75px;
+            top: -50px;
+            z-index: 0;
+            font-size: 4rem;
+            align-content: center;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.firstparagraphpg2{
+    padding-left: 10px;
+    line-height: 20px;
+    font-family:  'Rubik', sans-serif;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.tomheading{
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2;
+}
+
+blockquote{
+    left: 30px;
+    height:40px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    color: white;
+    &::before, &::after {
+        content: '"';
+        font-family:'Rubik', sans-serif;
+        display: block;
+        color: #d200a1bd;
+        font-size: 6rem;
+    }
+    &::before{
+        top: -16px;
+        left: -26px;
+        position: absolute;
+    }
+    &::after{
+        bottom: -12px;
+        left: 40px;
+        position: static;
+    }
+}
+
+.containersecondcol{
+    padding-right: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.gradientquote{
+    font-family: 'Rubik', 'sans-serif';
+    font-size: 2rem;
+    font-style: italic;
+    padding:10px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top left, #d200a1ae, #e0dae05a,  #d200a1aa, #e0dae05a, #d200a1b3, #e0dae05a);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: none;          /* 'none' is not a valid background-clip value, 
+                                    but this is a shortcut to make the gradient w/o background*/
+    
+}
+
+.gradientquote{
+    display: none;
+}
+
+.secondparagraphpg2{
+    padding:10px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    font-size: 0.8rem;
+    line-height: 20px;
+    outline: none;
+}
+
+.majortom {
+    display: none;
+}
+
+.tomlink{
+    color: #D200A2;
+}
+
+.pil2{
+    color: #D200A2;
+}
+ 
+/*********************************************/
+/*******************FOOTER********************/
+/*********************************************/
+
+footer{
+    padding: 20px;
+    width: 100vw;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(2, 2, 86, 0.605);
+    font-family: 'Rubik', 'sans-serif';
+    font-size: 1.7ch;  
+    color:#D200A2;
+    animation: glow 1s ease-in-out infinite alternate;
+    visibility: hidden;
+}
+
+.accept{
+    width: 60px;
+    height: 25px;
+    border-radius: 2px;
+    background-color: rgba(2, 2, 158, 0.822);
+    font-family: 'Rubik', 'sans-serif';
+    font-weight: 500;
+    color: white;
+    font-size: 1.3ch;
+    position: absolute;
+    right: 10%;
+}
+
+ 
+/*********************************************/
+/******************TXT_BLING******************/
+/*********************************************/
+
+@keyframes glow{
+    from{
+        text-shadow: 0 0 20px #D200A2;
+    }
+    to{
+        text-shadow: 0 0 30px #D200A2,
+                     0 0 10px #D200A2;
+    }
+}
+
+/*********************************************/
+/*****************MEDIA-QUERIES***************/
+/*********************************************/
+
+@media screen and (min-width: 1024px) {
+    .section2 {
+        display: flex;
+        gap: 100px;
+    }
+
+    .brown, .grey {
+        width: 50%;
+    }
+
+    .majortom {
+        display: block;
+        width: 100px;
+        height: auto;
+        float: right;
+        transform: rotate(3deg);
+        bottom: 10px;
+    }
+
+    .gradientquote {
+        display: block;
+    }
+
+    li:hover{
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+    transition: 0.5s ease-in-out;
+    text-decoration-color: #D200A2;
+    }
+
+    footer{
+        visibility: visible;
+    }    
+ }
+
+
